@@ -9,13 +9,14 @@ public class Team
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
 
-    @Column(name = "player1")
+
     @OneToOne(targetEntity = Player.class)
+    @JoinColumn(name = "player1_id")
     private Player player1;
 
-    @Column(name = "player2")
+    @JoinColumn(name = "player2_id")
     @OneToOne(targetEntity = Player.class)
     private Player player2;
 

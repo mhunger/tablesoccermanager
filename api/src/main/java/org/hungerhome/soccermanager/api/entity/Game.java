@@ -14,25 +14,25 @@ public class Game
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
 
     @Column(name = "date")
     private Date date;
 
-    @Column(name = "opponent1")
+    @JoinColumn(name = "team1_id")
     @OneToOne(targetEntity = Player.class)
-    private Player opponent1;
+    private Player team1;
 
-    @Column(name = "opponent2")
+    @JoinColumn(name = "team2_id")
     @OneToOne(targetEntity = Player.class)
-    private Player opponent2;
+    private Player team2;
 
-    public int getId()
+    public Integer getId()
     {
         return id;
     }
 
-    public void setId(int id)
+    public void setId(Integer id)
     {
         this.id = id;
     }
@@ -47,23 +47,23 @@ public class Game
         this.date = date;
     }
 
-    public Player getOpponent1()
+    public Player getTeam1()
     {
-        return opponent1;
+        return team1;
     }
 
-    public void setOpponent1(Player opponent1)
+    public void setTeam1(Player team1)
     {
-        this.opponent1 = opponent1;
+        this.team1 = team1;
     }
 
-    public Player getOpponent2()
+    public Player getTeam2()
     {
-        return opponent2;
+        return team2;
     }
 
-    public void setOpponent2(Player opponent2)
+    public void setTeam2(Player team2)
     {
-        this.opponent2 = opponent2;
+        this.team2 = team2;
     }
 }
