@@ -1,12 +1,14 @@
 package org.hungerhome.soccermanager.api.entity;
 
-import javax.persistence.Column;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "team")
 public class Team
 {
-    @Column(name = "id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @Column(name = "player1")

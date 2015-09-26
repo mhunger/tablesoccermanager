@@ -1,15 +1,19 @@
 package org.hungerhome.soccermanager.api.entity;
 
 
-import javax.persistence.Column;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import org.springframework.context.annotation.Primary;
+import sun.jvm.hotspot.memory.Generation;
+
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
 @Table(name = "game")
 public class Game
 {
-    @Column(name = "id")
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @Column(name = "date")
