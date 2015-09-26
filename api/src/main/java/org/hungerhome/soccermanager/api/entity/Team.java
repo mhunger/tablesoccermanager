@@ -9,7 +9,7 @@ public class Team
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
 
 
     @OneToOne(targetEntity = Player.class)
@@ -20,12 +20,12 @@ public class Team
     @OneToOne(targetEntity = Player.class)
     private Player player2;
 
-    public int getId()
+    public Long getId()
     {
         return id;
     }
 
-    public void setId(int id)
+    public void setId(Long id)
     {
         this.id = id;
     }

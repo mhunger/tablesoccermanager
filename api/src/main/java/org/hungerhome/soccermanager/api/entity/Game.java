@@ -1,23 +1,26 @@
 package org.hungerhome.soccermanager.api.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.context.annotation.Primary;
 import sun.jvm.hotspot.memory.Generation;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
 @Table(name = "game")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Game
 {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
 
     @Column(name = "date")
-    private Date date;
+    private Timestamp date;
 
     @JoinColumn(name = "team1_id")
     @OneToOne(targetEntity = Player.class)
@@ -27,22 +30,22 @@ public class Game
     @OneToOne(targetEntity = Player.class)
     private Player team2;
 
-    public Integer getId()
+    public Long getId()
     {
         return id;
     }
 
-    public void setId(Integer id)
+    public void setId(Long id)
     {
         this.id = id;
     }
 
-    public Date getDate()
+    public Timestamp getDate()
     {
         return date;
     }
 
-    public void setDate(Date date)
+    public void setDate(Timestamp date)
     {
         this.date = date;
     }

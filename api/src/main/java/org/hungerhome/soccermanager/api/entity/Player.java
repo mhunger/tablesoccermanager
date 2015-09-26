@@ -9,7 +9,7 @@ public class Player
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
 
     @Column(name = "name")
     private String name;
@@ -18,14 +18,14 @@ public class Player
     private String email;
 
     @Column(name = "age")
-    private int age;
+    private Integer age;
 
-    public int getId()
+    public Long getId()
     {
         return id;
     }
 
-    public void setId(int id)
+    public void setId(Long id)
     {
         this.id = id;
     }
@@ -38,6 +38,16 @@ public class Player
     public void setName(String name)
     {
         this.name = name;
+    }
+
+    public String getEmail()
+    {
+        return email;
+    }
+
+    public void setEmail(String email)
+    {
+        this.email = email;
     }
 
     public int getAge()
