@@ -1,11 +1,7 @@
 CREATE TABLE `player` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `age` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  CONSTRAINT `player_ibfk_4` FOREIGN KEY (`id`) REFERENCES `team` (`player2`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `player_ibfk_1` FOREIGN KEY (`id`) REFERENCES `game` (`opponent1`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `player_ibfk_2` FOREIGN KEY (`id`) REFERENCES `game` (`opponent2`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `player_ibfk_3` FOREIGN KEY (`id`) REFERENCES `team` (`player1`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `email` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
