@@ -23,12 +23,12 @@ public class Game
     private Timestamp date;
 
     @JoinColumn(name = "team1_id")
-    @OneToOne(targetEntity = Player.class)
-    private Player team1;
+    @OneToOne(targetEntity = Team.class)
+    private Team team1;
 
     @JoinColumn(name = "team2_id")
-    @OneToOne(targetEntity = Player.class)
-    private Player team2;
+    @OneToOne(targetEntity = Team.class)
+    private Team team2;
 
     public Long getId()
     {
@@ -50,22 +50,22 @@ public class Game
         this.date = date;
     }
 
-    public Player getTeam1()
+    public Team getTeam1()
     {
         return team1;
     }
 
-    public void setTeam1(Player team1)
+    public void setTeam1(Team team1)
     {
         this.team1 = team1;
     }
 
-    public Player getTeam2()
+    public Team getTeam2()
     {
         return team2;
     }
 
-    public void setTeam2(Player team2)
+    public void setTeam2(Team team2)
     {
         this.team2 = team2;
     }
