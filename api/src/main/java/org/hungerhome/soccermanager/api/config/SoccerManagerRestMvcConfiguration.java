@@ -1,5 +1,7 @@
 package org.hungerhome.soccermanager.api.config;
 
+import org.hungerhome.soccermanager.api.framework.PlayerEventHandler;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
@@ -12,5 +14,10 @@ public class SoccerManagerRestMvcConfiguration extends RepositoryRestMvcConfigur
         RepositoryRestConfiguration config = super.config();
         config.setBaseUri("/api");
         return config;
+    }
+
+    @Bean
+    PlayerEventHandler playerEventHandler() {
+        return new PlayerEventHandler();
     }
 }
