@@ -1,6 +1,7 @@
 package org.hungerhome.soccermanager.api.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "player")
@@ -12,6 +13,7 @@ public class Player
     private Long id;
 
     @Column(name = "name")
+    @NotNull
     private String name;
 
     @Column(name = "email")
