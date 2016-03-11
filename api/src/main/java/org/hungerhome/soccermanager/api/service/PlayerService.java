@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
-@Service(value = "PlayerService")
+@Service
 public class PlayerService
 {
     @Autowired

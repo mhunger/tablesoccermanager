@@ -2,12 +2,9 @@ package org.hungerhome.soccermanager.api.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import org.springframework.context.annotation.Primary;
-import sun.jvm.hotspot.memory.Generation;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.Date;
 
 @Entity
 @Table(name = "game")
