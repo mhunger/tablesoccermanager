@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<!--
+-
+- Sequel Pro XML dump
+- Version 4096
+-
+- http://www.sequelpro.com/
+- http://code.google.com/p/sequel-pro/
+-
+- Host: soccer.dev (MySQL 5.5.44-0ubuntu0.12.04.1)
+- Database: soccermanager
+- Generation Time Time: 2015-09-28 12:24:39 +0000
+-
+-->
+
+<dataset>
+
+	<player id="1" age="20" name="Michael Hunger" email="m.hunger@yahoo.de"/>
+	<player id="2" age="21" name="Mueller" email="m.mueller@gmx.de"/>
+	<player id="3" age="22" name="Stefan knecht" email="stefan.h@googlemail.de"/>
+	<player id="4" age="22" name="Chris Do" email="m.telt@yahoo.de"/>
+
+</dataset>

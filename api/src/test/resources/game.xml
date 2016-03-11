@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!--
+-
+- Sequel Pro XML dump
+- Version 4096
+-
+- http://www.sequelpro.com/
+- http://code.google.com/p/sequel-pro/
+-
+- Host: soccer.dev (MySQL 5.5.44-0ubuntu0.12.04.1)
+- Database: soccermanager
+- Generation Time Time: 2015-09-28 12:24:39 +0000
+-
+-->
+
+<dataset>
+
+	<game id="1" date="2015-01-01 00:00:00" team1_id="1" team2_id="2"/>
+	<game id="2" date="2015-02-01 00:00:00" team1_id="3" team2_id="4"/>
+
+</dataset>
